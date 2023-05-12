@@ -15,4 +15,3 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PublicController::Class, 'homepage'])->name('homepage');
-Route::get('/login', [PublicController::Class, 'login'])->name('login');
