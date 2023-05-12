@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ThreadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PublicController::Class, 'homepage'])->name('homepage');
+
+Route::get('/thread/index', [ThreadController::class, 'index'])->name('index');
+Route::get('/thread/create', [ThreadController::class, 'create'])->name('create');
+Route::post('/thread/store', [ThreadController::class, 'store'])->name('store');

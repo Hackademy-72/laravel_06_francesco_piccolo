@@ -1,15 +1,8 @@
 <x-layout>
-    <h1 class="p-4">Forum</h1>
-
-    <div class="container p-5">
-        <div class="row">
-            <div class="col-6">
-                <h3>Discussioni recenti:</h3>
-            </div>
-            <div class="col-6 d-flex justify-content-end">
-                <a href=""><button></button></a>
-            </div>
+    @if (session('ThreadCreated'))
+        <div class="alert alert-success text-center">
+            {{ session('ThreadCreated') }}
         </div>
-    </div>
-
+    @endif
+    <h1 class="p-4">ForumdelBro</h1>
 </x-layout>

@@ -7,16 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
+          <a class="nav-link active" href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Features</a>
+          <a class="nav-link active" href="{{route('index')}}">Discussioni</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#">Pricing</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
             Account
           </a>
           <ul class="dropdown-menu">
