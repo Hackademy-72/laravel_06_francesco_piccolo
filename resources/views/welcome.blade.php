@@ -4,5 +4,6 @@
             {{ session('ThreadCreated') }}
         </div>
     @endif
-    <h1 class="p-4">ForumdelBro</h1>
+    <h1 class="p-4">Forum di Milano</h1>
+
 </x-layout>

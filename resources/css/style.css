@@ -2,3 +2,13 @@
     background-color: #f8ceec;
     background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);    
 }
+
+.thread-item:hover{
+    background-color: #a88beb;
+    cursor: pointer;
+    border-color: #a88beb !important;
+}
+
+.form-reply{
+    width: 50vh;
+}

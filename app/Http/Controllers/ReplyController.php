@@ -2,19 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Thread;
+use App\Models\Reply;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class ThreadController extends Controller
+class ReplyController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $threads = Thread::all();
-
-        return view('thread.index', compact('threads'));
+        {
+            $replies = Reply::all();
+    
+            return view('reply.index', compact('replies'));
+        }
     }
 
     /**
@@ -22,7 +25,7 @@ class ThreadController extends Controller
      */
     public function create()
     {
-        return view('thread.create');
+        //
     }
 
     /**
@@ -30,26 +33,27 @@ class ThreadController extends Controller
      */
     public function store(Request $request)
     {
-        $thread = Thread::create([
-            'title'=> $request->title,
-            'description'=> $request->description,
+        $reply = Reply::create([
+            'reply'=> $request->reply,
+            'thread_id'=>$request->thread_id,
+            'user_id'=>Auth::user()->id,
         ]);
 
-        return redirect(route('homepage'))->with('ThreadCreated', 'Hai creato correttamente il  tuo thread');
+        return redirect(route('homepage'))->with('ThreadCreated', 'Hai commentato correttamente il thread');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Thread $thread)
+    public function show(Reply $reply)
     {
-        return view('thread.show', compact('thread'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Thread $thread)
+    public function edit(Reply $reply)
     {
         //
     }
@@ -57,7 +61,7 @@ class ThreadController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Thread $thread)
+    public function update(Request $request, Reply $reply)
     {
         //
     }
@@ -65,7 +69,7 @@ class ThreadController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Thread $thread)
+    public function destroy(Reply $reply)
     {
         //
     }
