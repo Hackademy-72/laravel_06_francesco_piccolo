@@ -35,7 +35,7 @@ class ThreadController extends Controller
             'description'=> $request->description,
         ]);
 
-        return redirect(route('homepage'))->with('ThreadCreated', 'Hai creato correttamente il  tuo thread');
+        return redirect(route('index'))->with('ThreadCreated', 'Hai creato correttamente il tuo thread :)');
     }
 
     /**
