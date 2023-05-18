@@ -36,8 +36,5 @@
                   </form>
             </div>
         </div>
-        <p>Utilizza queste credenziali:</p>
-        <p>Email: piccolofrancesco300@gmail.com</p>
-        <p>Password: aaaaaaaa</p>
     </div>
 </x-layout>
